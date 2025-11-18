@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Practika</title>
+</head>
+<body>
+@@include('_header.html')
+@@include('_perehod.html', {
+"text": "Главная →",
+"text_two": "О музее"
+})
+<div class="banner-o-nas">
+    <p class="inf-banner">«Кипрей» — это уникальный музей чая, расположенный в историческом центре Нижнего Новгорода. Мы храним и продолжаем традиции чайной культуры, знакомя гостей с многовековой историей чаепития.</p>
+</div>
+<h2 class="blpreim">Преимущества</h2>
+<div class="preim">
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/list.webp" height="100" width="98"/>',
+    "text": 'Уникальные экспонаты XIX–XX веков'
+    })
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/chashka.webp" height="100" width="98"/>',
+    "text": 'Интерактивные чайные церемонии'
+    })
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/kniga.webp" height="100" width="88"/>',
+    "text": 'Интерактивные чайные церемонии'
+    })
+</div>
+<div class="preim">
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/serd.webp" height="100" width="98"/>',
+    "text": 'Просвещение и деликатный подход'
+    })
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/plant.webp" height="100" width="98"/>',
+    "text": 'Качество от плантации до чашки'
+    })
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/chayn.webp" height="100" width="98"/>',
+    "text": 'Возрождать культуру настоящего <br> чая'
+    })
+</div>
+<h2 class="blpreim">Наша команда</h2>
+<div class="comanda">
+    <div class="cart-sotr">
+        <img class="foto" src="./assets/images/d.webp" height="400" width="400"/>
+        <h3 class="name-sotr">Бутринов Михаил Олегович</h3>
+        <p class="dolzhn">Зам. директора</p>
+    </div>
+    <div class="cart-sotr">
+        <img class="foto" src="./assets/images/j.webp" height="400" width="400"/>
+        <h3 class="name-sotr">Пугачева Раиса Сергеевна</h3>
+        <p class="dolzhn">Директор</p>
+    </div>
+    <div class="cart-sotr">
+        <img class="foto" src="./assets/images/k.webp" height="400" width="400"/>
+        <h3 class="name-sotr">Алёхин Никита Юрьевич</h3>
+        <p class="dolzhn">Начальник отдела</p>
+    </div>
+</div>
+<h2 class="blpreim">Музей сегодня</h2>
+<div class="preim">
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/shapka.webp" height="100" width="158"/>',
+    "text": 'Учебные площадки в Нижнем Новгороде, Москве'
+    })
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/medal.webp" height="95" width="68"/>',
+    "text": 'Специалисты с опытом разработки свыше 22 лет'
+    })
+    @@include('./_cartpreim.html', {
+    "icon": '<img src="./assets/images/local.webp" height="95" width="68"/>',
+    "text": 'Локации в городах: Москва, Нижний Новгород, Орёл'
+    })
+</div>
+@@include('./_footer.html')
+</body>

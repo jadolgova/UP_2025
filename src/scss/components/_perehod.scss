@@ -1,0 +1,23 @@
+.perehod {
+  background: #8B9467;
+  margin-left: -162px;
+  margin-right: -162px;
+  padding: 30px 30px 30px 195px;
+  color: #F9F4E2;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  a{
+    text-decoration: none;
+    color: #F9F4E2;
+  }
+  .sl_one{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 36px;
+  }
+  .sl_two{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
