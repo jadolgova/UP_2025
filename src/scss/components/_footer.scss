@@ -1,11 +1,9 @@
 .footer {
   background: #8B9467;
-  color: white;
+  color: var(--text);
   font-family: 'Montserrat', sans-serif;
-  padding: 60px 20px 20px;
+  padding: 2vh;
   margin-top: 150px;
-  margin-left: -162px;
-  margin-right: -162px;
 
   .footer-content {
     display: flex;
@@ -17,6 +15,7 @@
     .footer-col {
       ul {
         list-style: none;
+        color: var(--text);
       }
 
       li {
@@ -26,11 +25,15 @@
           display: flex;
           gap: 15px;
           align-items: center;
+          svg{
+            color: var(--text);
+            fill: var(--text);
+          }
         }
       }
 
       a {
-        color: white;
+        color: var(--text);
         text-decoration: none;
 
         &:hover {
@@ -44,19 +47,112 @@
     text-align: center;
     margin-top: 50px;
     padding-top: 25px;
-    border-top: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid var(--text);
 
     p {
       font-size: 16px;
       margin: 0;
+      color: var(--text);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .footer-content {
+      gap: 400px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .footer-content {
+      gap: 200px;
+
+      .footer-col li {
+        font-size: 20px;
+      }
     }
   }
 
   @media (max-width: 768px) {
+    margin-top: 100px;
+
     .footer-content {
-      flex-direction: column;
-      gap: 50px;
-      text-align: center;
+      gap: 100px;
+
+      .footer-col li {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      gap: 60px;
+
+      .footer-col li {
+        font-size: 16px;
+        margin-bottom: 12px;
+
+        .seti {
+          gap: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 80px;
+    padding: 3vh;
+
+    .footer-content {
+      gap: 40px;
+
+      .footer-col li {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    margin-top: 60px;
+    padding: 2vh;
+
+    .footer-content {
+      gap: 30px;
+
+      .footer-col li {
+        font-size: 13px;
+        margin-bottom: 8px;
+
+        .seti {
+          gap: 8px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 25px;
+
+      p {
+        font-size: 11px;
+      }
     }
   }
 }

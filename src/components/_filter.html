@@ -1,0 +1,10 @@
+<div class="filter">
+    <div class="filter-btn">
+        @@icon
+    </div>
+    <div class="filter-dropdown">
+        @@for (var i = 0; i < options.length; i++) {
+        <div class="filter-item" data-value="`+options[i].value+`">`+options[i].label+`</div>
+        }
+    </div>
+</div>

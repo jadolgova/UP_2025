@@ -1,10 +1,14 @@
 .product-card{
-  padding: 25px;
+  padding: 2vh;
   border: 1px solid #8B9467;
-  border-radius: 10px;
-  width: 400px;
-  height: 768px;
+  width: 350px;
+  height: 690px;
   transition: all 0.3s ease;
+
+  img{
+    width: 345px;
+    height: 400px;
+  }
 
   &:hover {
     background-color: rgba(139, 148, 103, 0.27);
@@ -13,7 +17,6 @@
 
   .product-image{
     width: 350px;
-    height: 470px;
     transition: all 0.3s ease;
   }
 
@@ -25,13 +28,13 @@
     display: flex;
     gap: 20px;
     margin-top: 25px;
+    align-items: center;
 
     .product-btn{
       border: 1px solid #8B9467;
-      border-radius: 10px;
       background: none;
       width: 300px;
-      height: 80px;
+      height: 60px;
       font-size: 24px;
       color: #8B9467;
       transition: all 0.3s ease;
@@ -50,8 +53,9 @@
 
   .product-price{
     font-family: 'Poppins', sans-serif;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
+    color: #8B9467;
   }
 
   svg {
@@ -61,6 +65,86 @@
 
     &:hover path {
       fill: #8e2222;
+    }
+  }
+
+  // Адаптация для 420px - компактный размер, две карточки в строке
+  @media (max-width: 420px) {
+    width: 48%;
+    height: 350px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+      height: 220px;
+    }
+
+    .product-image {
+      width: 100%;
+    }
+
+    .nazvanie {
+      font-size: 16px;
+      margin: 8px 0;
+    }
+
+    .product-price {
+      font-size: 20px;
+      margin: 5px 0;
+    }
+
+    .btn-group {
+      gap: 8px;
+      margin-top: 12px;
+
+      .product-btn {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    width: 48%;
+    height: 295px;
+    padding: 8px;
+    margin-bottom: 12px;
+
+    img {
+      height: 180px;
+    }
+
+    .nazvanie {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+
+    .product-price {
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .btn-group {
+      gap: 6px;
+      margin-top: 10px;
+
+      .product-btn {
+        width: 110px;
+        height: 32px;
+        font-size: 12px;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }

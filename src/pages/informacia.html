@@ -14,70 +14,129 @@
 "text": "Главная →",
 "text_two": "О музее"
 })
-<div class="banner-o-nas">
-    <p class="inf-banner">«Кипрей» — это уникальный музей чая, расположенный в историческом центре Нижнего Новгорода. Мы храним и продолжаем традиции чайной культуры, знакомя гостей с многовековой историей чаепития.</p>
-</div>
-<h2 class="blpreim">Преимущества</h2>
-<div class="preim">
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/list.webp" height="100" width="98"/>',
-    "text": 'Уникальные экспонаты XIX–XX веков'
-    })
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/chashka.webp" height="100" width="98"/>',
-    "text": 'Интерактивные чайные церемонии'
-    })
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/kniga.webp" height="100" width="88"/>',
-    "text": 'Интерактивные чайные церемонии'
-    })
-</div>
-<div class="preim">
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/serd.webp" height="100" width="98"/>',
-    "text": 'Просвещение и деликатный подход'
-    })
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/plant.webp" height="100" width="98"/>',
-    "text": 'Качество от плантации до чашки'
-    })
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/chayn.webp" height="100" width="98"/>',
-    "text": 'Возрождать культуру настоящего <br> чая'
-    })
-</div>
-<h2 class="blpreim">Наша команда</h2>
-<div class="comanda">
-    <div class="cart-sotr">
-        <img class="foto" src="./assets/images/d.webp" height="400" width="400"/>
-        <h3 class="name-sotr">Бутринов Михаил Олегович</h3>
-        <p class="dolzhn">Зам. директора</p>
+<section class="banner-o-nas">
+    <div class="container"><p class="inf-banner">«Кипрей» — это уникальный музей чая, расположенный в историческом центре Нижнего Новгорода. Мы храним и продолжаем традиции чайной культуры, знакомя гостей с многовековой историей чаепития.</p>
     </div>
-    <div class="cart-sotr">
-        <img class="foto" src="./assets/images/j.webp" height="400" width="400"/>
-        <h3 class="name-sotr">Пугачева Раиса Сергеевна</h3>
-        <p class="dolzhn">Директор</p>
+</section>
+<div class="simple-slider">
+    <div class="slides">
+        <div class="slide"><img src="./assets/images/музейё.webp"  height="300"></div>
+        <div class="slide"><img src="./assets/images/музей 2.webp"  height="300"></div>
+        <div class="slide"><img src="./assets/images/музей3.webp" height="100"></div>
+        <div class="slide"><img src="./assets/images/музей4.webp" height="100"></div>
+        <div class="slide"><img src="./assets/images/музей5.webp" height="100"></div>
     </div>
-    <div class="cart-sotr">
-        <img class="foto" src="./assets/images/k.webp" height="400" width="400"/>
-        <h3 class="name-sotr">Алёхин Никита Юрьевич</h3>
-        <p class="dolzhn">Начальник отдела</p>
+    <button class="slider-btn prev">❮</button>
+    <button class="slider-btn next">❯</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.simple-slider');
+        const slides = slider.querySelector('.slides');
+        const slideCount = slider.querySelectorAll('.slide').length;
+        let currentIndex = 0;
+        let autoSlide;
+
+        function goToSlide(index) {
+            currentIndex = index;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slideCount;
+            goToSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            goToSlide(currentIndex);
+        }
+
+        slider.querySelector('.next').addEventListener('click', nextSlide);
+        slider.querySelector('.prev').addEventListener('click', prevSlide);
+
+        function startAutoSlide() {
+            autoSlide = setInterval(nextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlide);
+        }
+
+        startAutoSlide();
+
+        slider.addEventListener('mouseenter', stopAutoSlide);
+        slider.addEventListener('mouseleave', startAutoSlide);
+    });
+</script>
+<div class="container">
+    <h2 class="blpreim">Преимущества</h2>
+    <div class="preim">
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/listZ.webp" height="80" width="78"/>',
+        "text": 'Уникальные экспонаты XIX–XX веков'
+        })
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/chashk.webp" height="80" width="78"/>',
+        "text": 'Интерактивные чайные церемонии'
+        })
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/knigZ.webp" height="80" width="68"/>',
+        "text": 'Интерактивные чайные церемонии'
+        })
+    </div>
+    <div class="preim">
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/serdZ.webp" height="70" width="80"/>',
+        "text": 'Просвещение и деликатный подход'
+        })
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/plant.webp" height="80" width="80"/>',
+        "text": 'Качество от плантации до чашки'
+        })
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/chaynZ.webp" height="100" width="98"/>',
+        "text": 'Возрождать культуру настоящего <br> чая'
+        })
     </div>
 </div>
-<h2 class="blpreim">Музей сегодня</h2>
-<div class="preim">
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/shapka.webp" height="100" width="158"/>',
-    "text": 'Учебные площадки в Нижнем Новгороде, Москве'
-    })
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/medal.webp" height="95" width="68"/>',
-    "text": 'Специалисты с опытом разработки свыше 22 лет'
-    })
-    @@include('./_cartpreim.html', {
-    "icon": '<img src="./assets/images/local.webp" height="95" width="68"/>',
-    "text": 'Локации в городах: Москва, Нижний Новгород, Орёл'
-    })
+<div class="container">
+    <h2 class="blpreim">Наша команда</h2>
+    <div class="comanda">
+        <div class="cart-sotr">
+            <img class="foto" src="./assets/images/d.webp" height="400" width="400"/>
+            <h3 class="name-sotr">Бутринов Михаил Олегович</h3>
+            <p class="dolzhn">Зам. директора</p>
+        </div>
+        <div class="cart-sotr">
+            <img class="foto" src="./assets/images/j.webp" height="400" width="400"/>
+            <h3 class="name-sotr">Пугачева Раиса Сергеевна</h3>
+            <p class="dolzhn">Директор</p>
+        </div>
+        <div class="cart-sotr">
+            <img class="foto" src="./assets/images/k.webp" height="400" width="400"/>
+            <h3 class="name-sotr">Алёхин Никита Юрьевич</h3>
+            <p class="dolzhn">Начальник отдела</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2 class="blpreim">Музей сегодня</h2>
+    <div class="preim">
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/shapkaZ.webp" height="100" width="158"/>',
+        "text": 'Учебные площадки в Нижнем Новгороде, Москве'
+        })
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/medalZ.webp" height="95" width="68"/>',
+        "text": 'Специалисты с опытом разработки свыше 22 лет'
+        })
+        @@include('./_cartpreim.html', {
+        "icon": '<img src="./assets/images/localZ.webp" height="95" width="68"/>',
+        "text": 'Локации в городах: Москва, Нижний Новгород, Орёл'
+        })
+    </div>
 </div>
 @@include('./_footer.html')
 </body>
