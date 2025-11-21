@@ -127,13 +127,12 @@ h2 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 40px 0;
   text-align: left;
 
   .text_banner {
     h1 {
       font-size: 54px;
-      margin-bottom: 20px;
+      padding: 40px 0 0 0;
     }
 
     p {
@@ -146,6 +145,7 @@ h2 {
     margin-top: 50px;
     display: flex;
     justify-content: flex-start;
+    padding: 0 0 40px 0;
   }
 }
 
