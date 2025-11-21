@@ -60,6 +60,7 @@
   svg {
     path {
       transition: fill 0.3s ease;
+      cursor: pointer;
     }
 
     &:hover path {
