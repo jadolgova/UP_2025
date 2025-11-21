@@ -67,8 +67,47 @@
       fill: #8e2222;
     }
   }
+  @media (max-width: 860px) {
+    width: 360px;
+    height: 640px;
+    padding: 10px;
+    margin-bottom: 15px;
 
-  // Адаптация для 420px - компактный размер, две карточки в строке
+    img {
+      width: 360px;
+      height: 430px;
+    }
+
+    .product-image {
+      width: 100%;
+    }
+
+    .nazvanie {
+      font-size: 32px;
+      margin: 8px 0;
+    }
+
+    .product-price {
+      font-size: 32px;
+      margin: 5px 0;
+    }
+
+    .btn-group {
+      gap: 8px;
+      margin-top: 12px;
+
+      .product-btn {
+        width: 290px;
+        height: 60px;
+        font-size: 22px;
+      }
+
+      svg {
+        width: 47px;
+        height: 47px;
+      }
+    }
+  }
   @media (max-width: 420px) {
     width: 48%;
     height: 370px;
@@ -112,17 +151,17 @@
   }
 
   @media (max-width: 390px) {
-    width: 48%;
+    width: 150px;
     height: 295px;
     padding: 8px;
     margin-bottom: 12px;
 
     img {
-      height: 180px;
+      height: 190px;
     }
 
     .nazvanie {
-      font-size: 14px;
+      font-size: 12px;
       margin: 6px 0;
     }
 

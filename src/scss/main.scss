@@ -181,7 +181,7 @@ h2 {
 .preim {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   padding: 40px 20px;
   width: 100%;
@@ -1086,6 +1086,10 @@ h2 {
 
   .str-filter {
     padding: 10px 0;
+    svg{
+      width: 30px;
+      height: 30px;
+    }
   }
 
   .strPerehod {
@@ -1271,6 +1275,10 @@ h2 {
 
   .str-filter {
     padding: 8px 0;
+    svg{
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .strPerehod {
@@ -1356,3 +1364,4 @@ h2 {
     }
   }
 }
+
