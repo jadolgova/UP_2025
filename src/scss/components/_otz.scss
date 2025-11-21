@@ -1,15 +1,27 @@
-.name{
-  display: flex;
-  gap: 10px;
-  font-size: 40px;
-  font-family: 'Poppins', sans-serif;
-  align-items: center;
-}
-.reyt{
-  display: flex;
-  gap: 10px;
-}
-p{
-  font-family: 'Poppins', sans-serif;
+.otz {
   font-size: 24px;
+}
+
+@media (max-width: 1145px) {
+  .otz {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .otz {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .otz {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 391px) {
+  .otz {
+    font-size: 14px;
+  }
 }

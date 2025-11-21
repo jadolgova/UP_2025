@@ -414,14 +414,15 @@ h2 {
 
 .locacia {
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: space-between;
+  gap: 80px;
+  //align-items: flex-start;
+  justify-content: center;
   padding: 40px 0;
 
   .loc-text {
-    flex: 1;
+    //flex: 1;
     max-width: 500px;
+    justify-content: center;
 
     .cont-muz {
       font-size: 32px;
@@ -432,13 +433,13 @@ h2 {
     .dann-inf {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 30px;
       margin-bottom: 20px;
 
       .inf-muz {
         font-size: 18px;
         color: #555;
-        margin: 0;
+        align-items: center;
       }
 
       svg {
@@ -492,28 +493,29 @@ h2 {
   border-radius: 5px;
 
   .contact-form {
-    text-align: left;
+    text-align: center;
     width: 100%;
 
     .vopros {
       font-size: 28px;
       margin-bottom: 15px;
       color: #8B9467;
-      text-align: left;
+      text-align: center;
     }
 
     .pred-form {
       font-size: 20px;
       margin-bottom: 25px;
       color: #8B9467;
-      text-align: left;
+      text-align: center;
     }
 
     .forma {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 15px;
-      align-items: flex-start;
+      align-items: center;
 
       input, .form-btn {
         width: 100%;
@@ -833,6 +835,7 @@ h2 {
 
   .products .cart-tov {
     min-width: 200px;
+    justify-content: center;
   }
 
   .comanda {
@@ -933,7 +936,7 @@ h2 {
         }
 
         svg {
-          width: 30px;
+          width: 24px;
         }
 
         &:last-child svg {
@@ -1032,6 +1035,7 @@ h2 {
   .products .cart-tov {
     min-width: 100%;
     margin: 5px 0;
+    justify-content: center;
   }
 
   .comanda {
@@ -1121,7 +1125,7 @@ h2 {
         }
 
         svg {
-          width: 28px;
+          width: 24px;
         }
 
         &:last-child {
@@ -1218,6 +1222,7 @@ h2 {
   .products {
     padding: 15px 0;
     gap: 8px;
+    justify-content: center;
   }
 
   .comanda {
@@ -1299,18 +1304,17 @@ h2 {
       .dann-inf {
         gap: 8px;
         margin-bottom: 12px;
-
+        align-items: center;
         .inf-muz {
           font-size: 14px;
+          align-items: center;
         }
 
         svg {
-          width: 25px;
+          height: 20px;
         }
 
-        &:last-child svg {
-          width: 28px;
-        }
+
       }
     }
 
